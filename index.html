@@ -1,17 +1,84 @@
 <!DOCTYPE html>
-<html>
-    <meta charset="UTF-8">
+<html lang="en">
+
 <head>
-    <title>服务器状态监控</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastgit Status</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <h1>CPU 占用</h1>
-    <iframe src="https://chart-embed.service.newrelic.com/herald/eebfb59f-13d8-48d0-a19b-d09548e004bf?height=450px&timepicker=true" style="width: 100%; height: 500px;"></iframe>
-    <h1>内存占用</h1>
-    <iframe src="https://chart-embed.service.newrelic.com/herald/393255a7-7e08-450a-9bc9-4bd49236c867?height=450px&timepicker=true" style="width: 100%; height: 500px;"></iframe>
-    <h1>磁盘占用</h1>
-    <iframe src="https://chart-embed.service.newrelic.com/herald/c81da827-03a5-4b54-b688-227d35e62293?height=450px&timepicker=true" style="width: 100%; height: 500px;"></iframe>
-    <h1>网络流量</h1>
-    <iframe src="https://chart-embed.service.newrelic.com/herald/2ac7997b-5614-4f14-8088-fb8541c21088?height=450px&timepicker=true" style="width: 100%; height: 500px;"></iframe>
+    <header>
+        <div class="h-14 border-b flex">
+            <div class="h-full flex items-center justify-center ">
+                <div class="flex items-center gap-4">
+                    <h1 class="text-gray-900 p-2 pr-4 border-r">
+                        <span class="text-2xl sm:text-3xl font-bold">Fast</span>
+                        <span class="text-2xl sm:text-3xl">Git</span>
+                        <span
+                            class="relative left-1 -top-1 rounded-full px-3 py-1.5 font-medium text-gray-600 bg-blue-100">Status</span>
+                    </h1>
+                    <p class="flowing-highlighting">Fast way to get github things.</p>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="grid sm:grid-cols-2 gap-4 p-2">
+            <section class="card h-[540px] rounded-md shadow-md p-2 border-2 border-slate-200">
+                <h2 class="text-sm p-2">CPU Usage</h2>
+                <iframe class="w-full h-full" src="https://chart-embed.service.newrelic.com/herald/eebfb59f-13d8-48d0-a19b-d09548e004bf?height=450px&timepicker=true" frameborder="0" scrolling="no"></iframe>
+            </section>
+            <section class="card h-[540px] rounded-md shadow-md p-2 border-2 border-slate-200">
+                <h2 class="text-sm p-2">Memory Usage</h2>
+                <iframe class="w-full h-full" src="https://chart-embed.service.newrelic.com/herald/393255a7-7e08-450a-9bc9-4bd49236c867?height=450px&timepicker=true" frameborder="0" scrolling="no"></iframe>
+            </section>
+            <section class="card h-[540px] rounded-md shadow-md p-2 border-2 border-slate-200">
+                <h2 class="text-sm p-2">Disk Throughout</h2>
+                <iframe class="w-full h-full" src="https://chart-embed.service.newrelic.com/herald/c81da827-03a5-4b54-b688-227d35e62293?height=450px&timepicker=true" frameborder="0" scrolling="no"></iframe>
+            </section>
+            <section class="card h-[540px] rounded-md shadow-md p-2 border-2 border-slate-200">
+                <h2 class="text-sm p-2">Network Traffic</h2>
+                <iframe class="w-full h-full" src="https://chart-embed.service.newrelic.com/herald/2ac7997b-5614-4f14-8088-fb8541c21088?height=450px&timepicker=true" frameborder="0" scrolling="no"></iframe>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="relative isolate overflow-hidden bg-white px-6 py-12 lg:overflow-visible lg:px-0">
+            <div class="absolute inset-0 -z-10 overflow-hidden">
+                <svg class="absolute left-[max(50%,25rem)] top-0 h-[64rem] w-[128rem] -translate-x-1/2 stroke-gray-200 [mask-image:radial-gradient(64rem_64rem_at_top,white,transparent)]"
+                    aria-hidden="true">
+                    <defs>
+                        <pattern id="e813992c-7d03-4cc4-a2bd-151760b470a0" width="200" height="200" x="50%" y="-1"
+                            patternUnits="userSpaceOnUse">
+                            <path d="M100 200V.5M.5 .5H200" fill="none" />
+                        </pattern>
+                    </defs>
+                    <svg x="50%" y="-1" class="overflow-visible fill-gray-50">
+                        <path
+                            d="M-100.5 0h201v201h-201Z M699.5 0h201v201h-201Z M499.5 400h201v201h-201Z M-300.5 600h201v201h-201Z"
+                            stroke-width="0" />
+                    </svg>
+                    <rect width="100%" height="100%" stroke-width="0"
+                        fill="url(#e813992c-7d03-4cc4-a2bd-151760b470a0)" />
+                </svg>
+            </div>
+            <div
+                class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+                <div
+                    class="lg:col-span-2 lg:col-start-1 lg:row-start-1 lg:mx-auto lg:grid lg:w-full lg:max-w-7xl lg:grid-cols-2 lg:gap-x-8 lg:px-8">
+                    <div class="mx-auto max-w-2xl lg:mx-0">
+                        <h1 class="text-gray-900"><span class="text-4xl sm:text-6xl font-bold">Fast</span><span
+                                class="text-4xl sm:text-6xl">Git</span><a href="#"
+                                class="relative left-1 -top-1 rounded-full bg-blue-50 px-3 py-1.5 font-medium text-gray-600 hover:bg-blue-100">Status</a>
+                        </h1>
+                        <p class="mt-2 text-lg leading-8 text-gray-500">Fast way to get github things.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
